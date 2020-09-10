@@ -96,11 +96,17 @@ jQuery(document).ready(function($){
 	}
 
 	ProductBuilder.prototype.createSummary = function() {
+
 		var self = this;
 		this.steps.each(function(){
 			//this function may need to be updated according to your builder steps and summary
 			var step = $(this);
-			if( $(this).data('selection') == 'colors' ) {
+			if( $(this).data('selection') == 'dimensions' ) {
+
+
+				console.log($('#product-length').val());
+				console.log($('#product-width').val());
+			} else if( $(this).data('selection') == 'colors' ) {
 				//create the Color summary
 				var colorSelected = $(this).find('.cd-product-customizer').find('.selected'),
 					color = colorSelected.children('a').data('color'),
@@ -112,12 +118,18 @@ jQuery(document).ready(function($){
 			} else if( $(this).data('selection') == 'accessories' ) {
 				var selectedOptions = $(this).find('.js-option.selected'),
 					optionsContent = '';
+					
+					console.log(selectedOptions);
 
 				if( selectedOptions.length == 0 ) {
 					optionsContent = '<li><p>No Accessories selected;</p></li>';
 				} else {
 					selectedOptions.each(function(){
-						optionsContent +='<li><p>'+$(this).find('p').text()+'</p></li>';
+						if($(this).find('input')){
+							optionsContent +='<li><p>'+$(this).find('p').text() + ": " + $(this).find('input').val()+' mm</p></li>';
+						} else {
+							optionsContent +='<li><p>'+$(this).find('p').text()+'</p></li>';
+						}
 					});
 				}
 
@@ -131,9 +143,12 @@ jQuery(document).ready(function($){
 		
 		if( listItem.hasClass('js-radio') ) {
 			//this means only one option can be selected (e.g., models) - so check if there's another option selected and deselect it
-			var alreadySelectedOption = listItem.siblings('.selected'),
-				price = (alreadySelectedOption.length > 0 ) ? -Number(alreadySelectedOption.data('price')) : 0;
+			if(listItem.hasClass('no-highlight') ) {
 
+			} else {
+				var alreadySelectedOption = listItem.siblings('.selected'),
+				price = (alreadySelectedOption.length > 0 ) ? -Number(alreadySelectedOption.data('price')) : 0;
+			}
 			//if the option was already selected and you are deselecting it - price is the price of the option just clicked
 			( listItem.hasClass('selected') ) 
 				? price = -Number(listItem.data('price'))
@@ -142,14 +157,18 @@ jQuery(document).ready(function($){
 			//now deselect all the other options
 			alreadySelectedOption.removeClass('selected');
 			//toggle the option just selected
-			listItem.toggleClass('selected');
+			if(listItem.hasClass('no-highlight') == false ){
+				listItem.toggleClass('selected');
+			}
 			//update totalPrice - only if the step is not the Models step
 			(listItem.parents('[data-selection="models"]').length == 0) && self.updatePrice(price);
 		} else {
 			//more than one options can be selected - just need to add/remove the one just clicked
 			var price = ( listItem.hasClass('selected') ) ? -Number(listItem.data('price')) : Number(listItem.data('price'));
 			//toggle the option just selected
-			listItem.toggleClass('selected');
+			if(listItem.hasClass('no-highlight') == false ){
+				listItem.toggleClass('selected');
+			}
 			//update totalPrice
 			self.updatePrice(price);
 		}

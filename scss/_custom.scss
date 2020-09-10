@@ -6,3 +6,32 @@ ul.models-list{
         padding-bottom: 10px;
     }
 }
+
+.cd-builder-steps .accessories-list .price.textfield{
+    display: block;
+    width: 70%;
+    input{
+        padding: 5px 15px;
+        width: 100%;
+        border: 2px solid #eee;
+        height: 50px;
+        font-size: 22px;
+        border-radius: 4px;
+        &::placeholder{
+            color: #eee;
+            font-style: italic;
+        }
+    }
+}
+
+.cd-builder-steps ul.accessories-list li.js-option{
+    input:focus{
+        border-color: $color-4;
+    }
+}
+.cd-step-content .options-list > li.selected.no-highlight{
+    border-color: $color-5;
+}
+.cd-step-content .options-list > li.no-highlight{
+    cursor: unset;
+}

@@ -2,6 +2,19 @@
 
 ul.models-list li.slick-slide { padding-bottom: 10px; }
 
+.cd-builder-steps .accessories-list .price.textfield { display: block; width: 70%; }
+.cd-builder-steps .accessories-list .price.textfield input { padding: 5px 15px; width: 100%; border: 2px solid #eee; height: 50px; font-size: 22px; border-radius: 4px; }
+.cd-builder-steps .accessories-list .price.textfield input::-webkit-input-placeholder { color: #eee; font-style: italic; }
+.cd-builder-steps .accessories-list .price.textfield input:-ms-input-placeholder { color: #eee; font-style: italic; }
+.cd-builder-steps .accessories-list .price.textfield input::-ms-input-placeholder { color: #eee; font-style: italic; }
+.cd-builder-steps .accessories-list .price.textfield input::placeholder { color: #eee; font-style: italic; }
+
+.cd-builder-steps ul.accessories-list li.js-option input:focus { border-color: #f1b204; }
+
+.cd-step-content .options-list > li.selected.no-highlight { border-color: #EDEDED; }
+
+.cd-step-content .options-list > li.no-highlight { cursor: unset; }
+
 /* -------------------------------- 
 
 Primary style
