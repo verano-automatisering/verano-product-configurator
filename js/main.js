@@ -15,11 +15,14 @@ jQuery(document).ready(function($){
 		this.mainNavigation = this.element.find('.cd-builder-main-nav');
 		this.secondaryNavigation = this.element.find('.cd-builder-secondary-nav');
 		//used to check if the builder content has been loaded properly
+		
+		// Custom items
 		this.loaded = true;
 		
 		// bind builder events
 		this.bindEvents();
 	}
+
 
 	ProductBuilder.prototype.bindEvents = function() {
 		var self = this;
@@ -29,7 +32,6 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 			self.loaded && self.newContentSelected($(this).index());
 		});
-
 		//detect click on bottom fixed navigation
 		this.secondaryNavigation.on('click', '.nav-item li:not(.buy)', function(event){ 
 			event.preventDefault();
@@ -45,6 +47,7 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 			self.customizeModel($(this));
 		});
+
 	};
 
 	ProductBuilder.prototype.newContentSelected = function(nextStep) {

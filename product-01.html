@@ -18,7 +18,7 @@
 		</ul>
 	</section>
 </li>
-
+<button href="#" class="popover">Bekijk voorbeeld</button>
 <li data-selection="accessories" class="builder-step first-load">
 	<section class="cd-step-content">
 		<header>
@@ -42,6 +42,7 @@
 			</li>
 			<li class="js-option" data-price="1080">
 				<p>BMW Charging Station</p>
+				
 
 				<span class="price">$1.080</span>
 				
@@ -112,3 +113,13 @@
 		</ul>
 	</section>
 </li>
+
+<script>
+	jQuery(document).ready(function($){
+		// Custom items
+		console.log($(".popover"));
+		$(".popover").click(function() {
+			console.log('Clicked!');
+		});
+	});
+</script>

@@ -9,4 +9,8 @@ jQuery(document).ready(function($){
         arrows: false,
       });
 
+      // console.log($(".popover"));
+      // $(".popover").click(function() {
+      //   console.log('Clicked!');
+      // });
 });
