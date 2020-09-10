@@ -1,0 +1,202 @@
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility
+}
+
+em,i {
+    font-style: italic;
+    line-height: inherit
+}
+
+strong,b {
+    font-weight: 700;
+    line-height: inherit
+}
+
+small {
+    font-size: 80%;
+    line-height: inherit
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+    font-family: source sans pro,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: inherit;
+    text-rendering: optimizeLegibility
+}
+
+h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h4 small,.h4 small,h5 small,.h5 small,h6 small,.h6 small {
+    line-height: 0;
+    color: #d8d8d8
+}
+
+h1,.h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+h2,.h2 {
+    font-size: 2.1875rem;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+h3,.h3 {
+    font-size: 1.4375rem;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+h4,.h4 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+@media print,screen and (min-width: 40em) {
+    h1,.h1 {
+        font-size:4.0625rem
+    }
+
+    h2,.h2 {
+        font-size: 2.1875rem
+    }
+
+    h3,.h3 {
+        font-size: 1.4375rem
+    }
+
+    h4,.h4 {
+        font-size: 1rem
+    }
+}
+
+a {
+    line-height: inherit;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+}
+p{
+    a{
+        color: $blue;
+    }
+}
+
+a:hover,a:focus {
+    color: #000
+}
+@media screen and (min-width: 40em){
+    .wrapper {
+        margin: 0 30px;
+    }
+}
+@media screen and (min-width: 1470px){
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+// Buttons
+
+a.btn, button.btn{
+    -webkit-appearance: none;
+    background-color: $grey;
+    padding: 10px 15px;
+    @include fontSize(14px);
+    border: 2px solid $grey;
+    transition: .2s ease-in-out all;
+    &:hover{
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+    }
+    &.btn-blue{
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+        &.icon{
+            svg{
+                fill: $white;
+                g, path{
+                    fill: $white;
+                }
+            }
+        }
+        &:hover{
+            background-color: darken($blue, 5%);
+            border-color: darken($blue, 5%);
+        }
+    }
+    &.btn-yellow{
+        background-color: $yellow;
+        border-color: $yellow;
+        color: $white;
+        &.icon{
+            svg{
+                fill: $white;
+                g, path{
+                    fill: $white;
+                }
+            }
+        }
+        &:hover{
+            background-color: darken($yellow, 5%);
+            border-color: darken($yellow, 5%);
+        }
+    }
+    &.icon{
+        padding: 10px 15px 10px 40px;
+        position: relative;
+        &.right{
+            padding: 10px 40px 10px 15px;
+            i{
+                left: auto;
+                right: 10px;
+            }
+        }
+        i{
+            position: absolute;
+            left: 10px;
+            top: 11px;
+            transition: .2s ease-in-out all;
+            svg{
+                max-width: 17px;
+                max-height: 17px;
+                g, path{
+                }
+            }
+        }
+    }
+    // Animate icon
+    &.animate{
+        &.right{
+            &:hover{
+                i{
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
