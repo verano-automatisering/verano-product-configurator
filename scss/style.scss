@@ -227,7 +227,7 @@ Step content - basic style
 		
 		&::after {
 			/* check icon */
-			background: url(../img/cd-icon-check.svg) no-repeat center center;
+			background: url(img/cd-icon-check.svg) no-repeat center center;
 		}
 	}
 
@@ -1018,7 +1018,7 @@ Builder fixed bottom summary
 			position: absolute;
 			height: 16px;
 			width: 16px;
-			background: url(../img/cd-icon-arrow.svg) no-repeat 0 0;
+			background: url(img/cd-icon-arrow.svg) no-repeat 0 0;
 			pointer-events: none;
 		}
 	}
