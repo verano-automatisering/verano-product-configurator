@@ -6,6 +6,8 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import 'custom';
+
 /* -------------------------------- 
 
 Primary style
@@ -16,7 +18,7 @@ Primary style
 	box-sizing: border-box;
 }
 
-html {
+html { 
 	font-size: 62.5%;
 }
 
@@ -907,15 +909,15 @@ Builder fixed bottom summary
 		}
 
 		img {
-			width: 197px;
 			padding-right: 27px;
 			margin-right: 27px;
 			border-right: 1px solid shade($color-5, 5%);
 			transition: opacity .2s;
-			max-height: 100px !important;
-			padding-top: 15px!important;
-			width: auto !important;
-			height: auto !important;
+			max-height: 100px;
+			padding-top: 15px;
+			width: 150px;
+			height: auto;
+			object-fit: contain;
 		}
 
 		.selected-product span {
@@ -935,7 +937,7 @@ Builder fixed bottom summary
 
 		&.disabled .selected-product {
 			/* translateX is equal to img width (197px) + img margin-right (27px) */
-			transform: translateX(-224px) translateY(-50%);
+			transform: translateX(-177px) translateY(-50%);
 
 			img {
 				opacity: 0;

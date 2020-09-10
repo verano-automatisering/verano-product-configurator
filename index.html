@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="style.css"> <!-- Resource style -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   	
 	<title>Verano product configurator</title>
 </head>
@@ -34,35 +35,35 @@
 						<span class="steps-indicator">Stap <b>1</b> van 4</span>
 					</header>
 
-					<ul class="models-list options-list cd-col-2">
+					<ul class="models-list options-list cd-col-2" id="model-slider">
 						<li class="js-option js-radio" data-price="210" data-model="product-01">
 							<span class="name">V210 - Rhodos</span>
-							<img src="img/rhodos/V210-Rhodos.jpg" alt="V210 Rhodos">
+							<img data-lazy="img/rhodos/V210-Rhodos.jpg" alt="V210 Rhodos">
 							<span class="price">vanaf €210</span>
 							<div class="radio"></div>
 						</li>
 
 						<li class="js-option js-radio" data-price="450" data-model="product-02">
 							<span class="name">V225 Porto</span>
-							<img src="img/porto/V225-Porto.jpg" alt="V225 Porto">
+							<img data-lazy="img/porto/V225-Porto.jpg" alt="V225 Porto">
 							<span class="price">vanaf €450</span>
 							<div class="radio"></div>
 						</li>
 						<li class="js-option js-radio" data-price="460" data-model="product-03">
 							<span class="name">V225 Salou</span>
-							<img src="img/salou/V255-Salou.jpg" alt="V225 Salou">
+							<img data-lazy="img/salou/V255-Salou.jpg" alt="V225 Salou">
 							<span class="price">vanaf €460</span>
 							<div class="radio"></div>
 						</li>
 						<li class="js-option js-radio" data-price="500" data-model="product-04">
 							<span class="name">V280 Ipanema</span>
-							<img src="img/ipanema/V280-Ipanema.jpg" alt="V280 Ipanema">
+							<img data-lazy="img/ipanema/V280-Ipanema.jpg" alt="V280 Ipanema">
 							<span class="price">vanaf €500</span>
 							<div class="radio"></div>
 						</li>
 						<li class="js-option js-radio" data-price="650" data-model="product-05">
 							<span class="name">V285 Recife</span>
-							<img src="img/recife/V285-Recife.jpg" alt="V285 Recife">
+							<img data-lazy="img/recife/V285-Recife.jpg" alt="V285 Recife">
 							<span class="price">vanaf €650</span>
 							<div class="radio"></div>
 						</li>
@@ -108,9 +109,11 @@
 	</footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/slider.js"></script>
 </body>
 </html>
