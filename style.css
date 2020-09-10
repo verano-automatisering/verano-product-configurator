@@ -7,7 +7,7 @@ Primary style
 
 html { font-size: 62.5%; }
 
-body { font-size: 1.6rem; font-family: "Lato", sans-serif; color: #24221F; background-color: #ffffff; }
+body { font-size: 1.6rem; font-family: "Source Sans Pro", sans-serif; color: #24221F; background-color: #ffffff; }
 
 a { color: #5D7C89; text-decoration: none; }
 
@@ -52,14 +52,14 @@ Step content - basic style
 .cd-step-content h1 { font-size: 2.4rem; }
 .cd-step-content .steps-indicator { /* visible on mobile only - used to show the current step number */ position: absolute; right: 0; bottom: 2px; color: #5D7C89; }
 .cd-step-content .options-list > li { /* basic style for list of options */ border: 2px solid #EDEDED; border-radius: 4px; margin-bottom: 20px; cursor: pointer; -webkit-transition: border-color .3s; transition: border-color .3s; }
-.cd-step-content .options-list > li.selected { border-color: #FFB500; }
+.cd-step-content .options-list > li.selected { border-color: #f1b204; }
 .cd-step-content .radio, .cd-step-content .check { position: relative; display: inline-block; height: 30px; width: 30px; }
 .cd-step-content .radio::after, .cd-step-content .radio::before, .cd-step-content .check::after, .cd-step-content .check::before { /* used to create the check icon and yellow circle/square dot ( when element is selected) */ position: absolute; top: 0; left: 0; content: ''; height: 100%; width: 100%; /* Force hardware acceleration */ -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 .cd-step-content .radio::before, .cd-step-content .check::before { /* yellow circle/square */ border: 2px solid #EDEDED; background: #ffffff; -webkit-transition: background-color .3s, border-color .3s, -webkit-transform .3s; transition: background-color .3s, border-color .3s, -webkit-transform .3s; transition: background-color .3s, transform .3s, border-color .3s; transition: background-color .3s, transform .3s, border-color .3s, -webkit-transform .3s; }
 .cd-step-content .radio::after, .cd-step-content .check::after { /* check icon */ background: url(../img/cd-icon-check.svg) no-repeat center center; }
 .cd-step-content .radio::before { border-radius: 50%; }
 .cd-step-content .check::before { border-radius: 4px; }
-.cd-step-content .selected .radio::before, .cd-step-content .selected .check::before { background: #FFB500; border-color: #FFB500; -webkit-transform: scale(1.5); transform: scale(1.5); -webkit-animation: cd-bounce .5s; animation: cd-bounce .5s; }
+.cd-step-content .selected .radio::before, .cd-step-content .selected .check::before { background: #f1b204; border-color: #f1b204; -webkit-transform: scale(1.5); transform: scale(1.5); -webkit-animation: cd-bounce .5s; animation: cd-bounce .5s; }
 .active .cd-step-content { /* this is the animation of the selected step */ opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); -webkit-animation: cd-right-to-center .5s .2s backwards; animation: cd-right-to-center .5s .2s backwards; }
 .move-left .cd-step-content { /* this is the animation of a section moving left - selection already made */ -webkit-animation: cd-center-to-left .5s 0s backwards; animation: cd-center-to-left .5s 0s backwards; }
 .active.back .cd-step-content { /* this is the animation of the selected step - moving down*/ -webkit-animation: cd-left-to-center .5s .2s backwards; animation: cd-left-to-center .5s .2s backwards; }
@@ -110,8 +110,8 @@ Models Step - style
 .cd-builder-steps .models-list .name { display: block; font-size: 3.2rem; font-weight: bold; margin-top: .2em; }
 .cd-builder-steps .models-list img { display: block; max-width: 80%; margin: 1.8em auto 2.2em; }
 .cd-builder-steps .models-list .price { display: block; color: #5D7C89; margin-bottom: 1em; }
-.cd-builder-steps .models-list .selected .radio::before { /* show a loading animation while you wait for the HTML to be loaded */ background: transparent; border-color: #EDEDED; border-right-color: #FFB500; -webkit-transform: scale(1); transform: scale(1); -webkit-animation: cd-load .6s infinite; animation: cd-load .6s infinite; }
-.cd-builder-steps .models-list .selected.loaded .radio::before { /* content has been loaded - show the yellow circle + check icon */ background: #FFB500; border-color: #FFB500; -webkit-transform: scale(1.5); transform: scale(1.5); -webkit-animation: cd-bounce .5s; animation: cd-bounce .5s; }
+.cd-builder-steps .models-list .selected .radio::before { /* show a loading animation while you wait for the HTML to be loaded */ background: transparent; border-color: #EDEDED; border-right-color: #f1b204; -webkit-transform: scale(1); transform: scale(1); -webkit-animation: cd-load .6s infinite; animation: cd-load .6s infinite; }
+.cd-builder-steps .models-list .selected.loaded .radio::before { /* content has been loaded - show the yellow circle + check icon */ background: #f1b204; border-color: #f1b204; -webkit-transform: scale(1.5); transform: scale(1.5); -webkit-animation: cd-bounce .5s; animation: cd-bounce .5s; }
 
 @-webkit-keyframes cd-load { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
@@ -138,7 +138,7 @@ Colors Step - style
 .cd-product-customizer li::after { /* this is the tooltip content */ content: attr(data-content); background-color: rgba(237, 237, 237, 0.8); white-space: nowrap; padding: .7em 1.1em; border-radius: 2em; bottom: calc( 100% + 18px); }
 .cd-product-customizer li:hover::before, .cd-product-customizer li:hover::after { opacity: 1; visibility: visible; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 .cd-product-customizer a { /* replace text with bg color */ display: inline-block; overflow: hidden; text-indent: 100%; color: transparent; white-space: nowrap; height: 30px; width: 30px; border-radius: 50%; border: 2px solid #ffffff; -webkit-box-shadow: 0 0 0 2px #EDEDED; box-shadow: 0 0 0 2px #EDEDED; -webkit-transition: -webkit-box-shadow .3s; transition: -webkit-box-shadow .3s; transition: box-shadow .3s; transition: box-shadow .3s, -webkit-box-shadow .3s; }
-.cd-product-customizer .selected a { -webkit-box-shadow: 0 0 0 2px #FFB500; box-shadow: 0 0 0 2px #FFB500; }
+.cd-product-customizer .selected a { -webkit-box-shadow: 0 0 0 2px #f1b204; box-shadow: 0 0 0 2px #f1b204; }
 @media only screen and (min-width: 768px) { .cd-product-customizer li { margin-right: 1em; }
   .cd-product-customizer a { height: 50px; width: 50px; } }
 
@@ -207,9 +207,9 @@ Builder top navigation
 
 @media only screen and (min-width: 1024px) { .cd-builder-main-nav li { display: inline-block; }
   .cd-builder-main-nav a { display: block; font-size: 1.4rem; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: #5D7C89; padding: .7em .8em; border-bottom: 2px solid transparent; -webkit-transition: color .2s, border-color .2s; transition: color .2s, border-color .2s; }
-  .cd-builder-main-nav a:hover { color: #FFB500; }
-  .cd-builder-main-nav .active a { border-color: #FFB500; color: #FFB500; }
-  .cd-builder-main-nav .active a:hover { color: #FFB500; }
+  .cd-builder-main-nav a:hover { color: #f1b204; }
+  .cd-builder-main-nav .active a { border-color: #f1b204; color: #f1b204; }
+  .cd-builder-main-nav .active a:hover { color: #f1b204; }
   .cd-builder-main-nav.disabled li:not(.active) a { color: rgba(93, 124, 137, 0.5); } }
 
 /* -------------------------------- 
@@ -227,7 +227,7 @@ Builder fixed bottom summary
   .cd-builder-footer .selected-product { display: block; position: absolute; top: 50%; bottom: auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); left: 2em; -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
   .cd-builder-footer .selected-product::after { clear: both; content: ""; display: block; }
   .cd-builder-footer .selected-product, .cd-builder-footer img, .cd-builder-footer .tot-price { float: left; }
-  .cd-builder-footer img { width: 197px; padding-right: 27px; margin-right: 27px; border-right: 1px solid #e1e1e1; -webkit-transition: opacity .2s; transition: opacity .2s; max-height: 100px; padding-top: 15px; width: auto; height: auto; }
+  .cd-builder-footer img { width: 197px; padding-right: 27px; margin-right: 27px; border-right: 1px solid #e1e1e1; -webkit-transition: opacity .2s; transition: opacity .2s; max-height: 100px !important; padding-top: 15px !important; width: auto !important; height: auto !important; }
   .cd-builder-footer .selected-product span { display: block; color: #5D7C89; }
   .cd-builder-footer .tot-price { margin-top: 12px; }
   .cd-builder-footer .selected-product .total { color: #24221F; font-size: 3.2rem; margin-top: 4px; }
@@ -240,8 +240,8 @@ Builder fixed bottom summary
 .cd-builder-secondary-nav { height: 100%; }
 .cd-builder-secondary-nav .nav-item { position: absolute; top: 0; height: 100%; width: 50%; -webkit-transition: width .2s, opacity .2s; transition: width .2s, opacity .2s; overflow: hidden; }
 .cd-builder-secondary-nav .prev { left: 0; color: #5D7C89; }
-.cd-builder-secondary-nav .next { z-index: 1; right: 0; background: #FFB500; }
-.cd-builder-secondary-nav .next:hover { background: #ffbc1a; }
+.cd-builder-secondary-nav .next { z-index: 1; right: 0; background: #f1b204; }
+.cd-builder-secondary-nav .next:hover { background: #fbbe13; }
 .disabled .cd-builder-secondary-nav .next { background: rgba(93, 124, 137, 0.5); }
 .step-1 .cd-builder-secondary-nav .prev { /* if models are visible, do not show the prev link */ opacity: 0; }
 .step-1 .cd-builder-secondary-nav .next { width: 100%; }
