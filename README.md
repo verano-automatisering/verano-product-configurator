@@ -1,0 +1,1 @@
+# verano-product-configurator
